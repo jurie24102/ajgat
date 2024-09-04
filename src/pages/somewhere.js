@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Somewhere() {
   return (
     <>
       <Head>
