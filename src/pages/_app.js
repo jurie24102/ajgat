@@ -10,8 +10,19 @@ function MyApp({ Component, pageProps }) {
       window.gtag('config', 'G-VS3C2VKRTK', {
         page_path: url,
       });
+      // Setting user properties
+      window.gtag('set', 'user_properties', {
+        'favorite_color': 'blue', // You can make this dynamic based on user info
+      });
     };
+
     router.events.on('routeChangeComplete', handleRouteChange);
+
+    // Initial user properties setup
+    window.gtag('set', 'user_properties', {
+      'favorite_color': 'blue', // Set it once on initial load
+    });
+
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
@@ -33,7 +44,7 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-      
+
       {/* Google Analytics Script */}
       <Script
         strategy="afterInteractive"
