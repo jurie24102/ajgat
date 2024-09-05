@@ -3,6 +3,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import FormButtonEvent from "@/components/FormButtonEvent";
 import SomewhereButtonEvent from "@/components/SomewhereButtonEvent";
+import UserColor from "@/components/UserColor";
 
 export default function Home() {
   const router = useRouter();
@@ -28,7 +29,8 @@ export default function Home() {
         <Typography variant="h6">Google Analytics Test Site</Typography>
         <Typography mt={2} variant="h4">Whabam!</Typography>
         <SomewhereButtonEvent/>
-        <FormButtonEvent/>
+        <FormButtonEvent />
+        <UserColor/>
       </Box>
     </>
   );
