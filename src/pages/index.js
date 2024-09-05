@@ -1,33 +1,33 @@
-import Head from "next/head";
-import { Box, Button, Typography } from "@mui/material";
-import {useRouter} from "next/router";
+import { useState } from 'react';
 
-export default function Home() {
-  const router = useRouter();
+export default function ProfessionForm() {
+  const [profession, setProfession] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Send profession to Google Analytics 4 as a user property
+    window.gtag('set', 'user_properties', {
+      profession: profession,
+    });
+
+    // Optional: Reset the form or perform other actions
+    setProfession('');
+    alert('Profession sent to GA4!');
+  };
+
   return (
-    <>
-      <Head>
-        <title>A&JGAT ~ Whabam!</title>
-        <meta name="description" content="Whabam! Analytics!" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
-          height: "100vh",
-        }}
-      >
-        <Typography variant="h2">André & Jurie Google Analytics Test Site</Typography>
-        <Typography variant="h1">Whabam!</Typography>
-        <Button onClick={() => router.push("/somewhere")} variant="contained">
-          Go Somewhere
-        </Button>
-      </Box>
-    </>
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="profession">Your Profession:</label>
+      <input
+        type="text"
+        id="profession"
+        name="profession"
+        value={profession}
+        onChange={(e) => setProfession(e.target.value)}
+        required
+      />
+      <button type="submit">Submit</button>
+    </form>
   );
 }
