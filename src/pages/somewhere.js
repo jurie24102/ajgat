@@ -1,10 +1,9 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
-import { Box, Typography } from "@mui/material";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Box, Typography, Button } from "@mui/material";
+import {useRouter} from "next/router";
 
 export default function Somewhere() {
+    const router = useRouter();
   return (
     <>
       <Head>
@@ -23,9 +22,10 @@ export default function Somewhere() {
             height: "100vh",
           }}
         >
-          <Typography variant="h2">Welcome to Somewhere</Typography>
-        <Typography variant="h1">Whabam!</Typography>
-        
+            <Typography variant="h6">Welcome to Somewhere</Typography>
+            <Button sx={{mt: 3}} onClick={() => router.back()} variant="contained">
+                Back
+            </Button>
         </Box>
     </>
   );

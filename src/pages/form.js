@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>A&JGAT ~ Whabam!</title>
+        <title>Form ~ Whabam!</title>
         <meta name="description" content="Whabam! Analytics!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -21,16 +21,13 @@ export default function Home() {
           width: "100%",
           height: "100vh",
         }}
-      >
-        <Typography variant="h6">André & Jurie</Typography>
-        <Typography variant="h6">Google Analytics Test Site</Typography>
-        <Typography mt={2} variant="h4">Whabam!</Typography>
-        <Button sx={{mt: 3}} onClick={() => router.push("/somewhere")} variant="contained">
-          Go Somewhere
-        </Button>
-        <Button sx={{mt: 3}} onClick={() => router.push("/form")} variant="contained">
-          Fill In A form
-        </Button>
+          >
+              <Typography variant="h6">Send data to GA4.</Typography>
+              <Typography variant="h6" color="grey" fontStyle={"italic"}>form placeholder</Typography>
+              <Button sx={{mt: 3}} onClick={() => router.back()} variant="contained">
+                Back
+            </Button>
+        
       </Box>
     </>
   );
