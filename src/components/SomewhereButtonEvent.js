@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
 const handleClick = () => {
-  window.gtag('event', 'button_click', {
+  window.gtag('event', 'somewhere_button_click', {
     event_category: 'button',
-    event_label: 'cta_button',
+    event_label: 'somewhere_button',
   });
 };
 
