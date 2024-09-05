@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { Box, Button, Typography } from "@mui/material";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
+import FormButtonEvent from "@/components/FormButtonEvent";
+import SomewhereButtonEvent from "@/components/SomewhereButtonEvent";
 
 export default function Home() {
   const router = useRouter();
@@ -25,12 +27,8 @@ export default function Home() {
         <Typography variant="h6">André & Jurie</Typography>
         <Typography variant="h6">Google Analytics Test Site</Typography>
         <Typography mt={2} variant="h4">Whabam!</Typography>
-        <Button sx={{mt: 3}} onClick={() => router.push("/somewhere")} variant="contained">
-          Go Somewhere
-        </Button>
-        <Button sx={{mt: 3}} onClick={() => router.push("/form")} variant="contained">
-          Fill In A form
-        </Button>
+        <SomewhereButtonEvent/>
+        <FormButtonEvent/>
       </Box>
     </>
   );
