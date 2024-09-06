@@ -22,7 +22,7 @@ const StartButton = () => {
     }
   };
 
-  return <><Button sx={{ mt: 3 }} onClick={handleClick} variant="contained">Start</Button><Button sx={{ mt: 3 }} onClick={handleClick} variant="contained">Start2</Button></>;
+  return <><Button sx={{ mt: 3 }} onClick={handleClick} variant="contained">Start</Button><Button sx={{ mt: 3 }} onClick={handleClick2} variant="contained">Start2</Button></>;
 };
 
 export default StartButton;
