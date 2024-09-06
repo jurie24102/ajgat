@@ -8,10 +8,10 @@ export default function CreatePasswordScreen() {
   const router = useRouter();
   const handleClick = () => {
     gaEvent({
-      category: 'Routing',
+      category: 'Login Routing',
       action: 'Clicked Create Password',
       label: 'Route to dash',
-      value: 2
+      value: 3
     });
     router.push("/dash")
   };

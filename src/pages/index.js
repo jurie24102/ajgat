@@ -38,9 +38,9 @@ export default function Home() {
           onClick={() =>
             {
               gaEvent({
-                category: 'Routing',
-                action: 'Clicked Login',
-                label: 'Route to Create Password',
+                category: 'Login Routing',
+                action: 'Clicked Go To Login',
+                label: 'Route to Login screen',
                 value: 1
               });
               router.push("/Login/loginScreen")
