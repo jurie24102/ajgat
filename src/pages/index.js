@@ -7,6 +7,13 @@ import UserColor from "@/components/UserColor";
 
 export default function Home() {
   const router = useRouter();
+  const start = () => {
+    gaEvent({
+      action: 'Pressed Start',
+      category: 'Index Page',
+      label: 'Index Start Button',
+    })
+  }
   return (
     <>
       <Head>
@@ -30,7 +37,8 @@ export default function Home() {
         <Typography mt={2} variant="h4">Whabam!</Typography>
         <SomewhereButtonEvent/>
         <FormButtonEvent />
-        <UserColor/>
+        <UserColor />
+        <Button sx={{mt: 3}} onClick={() => start} variant="contained">start</Button>
       </Box>
     </>
   );
