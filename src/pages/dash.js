@@ -4,7 +4,7 @@ import { Button, Typography, Box} from '@mui/material';
 import gaEvent from '@/lib/gaEvent';
 import Head from 'next/head';
 
-function loginScreen() {
+export default function Dash() {
   const router = useRouter();
   const handleClick = () => {
   gaEvent({
@@ -38,5 +38,3 @@ function loginScreen() {
     </>
   );
 }
-
-export default loginScreen;
