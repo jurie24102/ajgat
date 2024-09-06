@@ -4,16 +4,11 @@ import { useRouter } from "next/router";
 import FormButtonEvent from "@/components/FormButtonEvent";
 import SomewhereButtonEvent from "@/components/SomewhereButtonEvent";
 import UserColor from "@/components/UserColor";
+import StartButton from "@/components/StartButton";
 
 export default function Home() {
   const router = useRouter();
-  const start = () => {
-    gaEvent({
-      action: 'Pressed Start',
-      category: 'Index Page',
-      label: 'Index Start Button',
-    })
-  }
+
   return (
     <>
       <Head>
@@ -38,7 +33,7 @@ export default function Home() {
         <SomewhereButtonEvent/>
         <FormButtonEvent />
         <UserColor />
-        <Button sx={{mt: 3}} onClick={() => start} variant="contained">start</Button>
+        <StartButton/>
       </Box>
     </>
   );
