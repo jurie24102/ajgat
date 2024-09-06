@@ -5,7 +5,7 @@ const StartButton = () => {
 
   const handleClick = () => {
     if (typeof window.gtag === 'function') {
-      window.gtag('event', 'click', {
+      window.gtag('event', 'Index Start Button Click', {
         event_category: 'Index Page',
         event_label: 'Index Start Button',
         value: 'Pressed Start'
