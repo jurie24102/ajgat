@@ -1,13 +1,14 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Button } from '@mui/material';
+import GoogleAnalytics from '../components/GoogleAnalytics'
 
 
 
 function StartButton() {
 
 const handleClick = () => {
-    gaEvent({
+    GoogleAnalytics({
       action: 'Pressed Start',
       category: 'Index Page',
       label: 'Index Start Button',
