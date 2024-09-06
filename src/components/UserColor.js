@@ -23,15 +23,6 @@ function UserColor() {
     }
   };
 
-  useEffect(() => {
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-VS3C2VKRTK');
-  }, []);
-
   return (
     <Container maxWidth="sm">
       <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 4 }}>

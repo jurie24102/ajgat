@@ -23,10 +23,10 @@ export default function Home() {
           height: "100vh",
         }}
           >
-              <Typography variant="h6">Send data to GA4.</Typography>
-        <Typography variant="h6" color="grey" fontStyle={"italic"}>form placeholder</Typography>
-        <ButtonComponent/>
-              <Button sx={{mt: 3}} onClick={() => router.back()} variant="contained">
+            <Typography variant="h6">Send data to GA4.</Typography>
+            <Typography variant="h6" color="grey" fontStyle={"italic"}>form placeholder</Typography>
+            <UserColor />
+            <Button sx={{mt: 3}} onClick={() => router.back()} variant="contained">
                 Back
             </Button>
         

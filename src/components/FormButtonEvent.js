@@ -16,15 +16,6 @@ const handleClick = () => {
   router.push("/form")
 };
   
-  useEffect(() => {
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-VS3C2VKRTK');
-  }, []);
-
   return <Button sx={{mt: 3}} onClick={handleClick} variant="contained">Fill In A form</Button>;
 }
 

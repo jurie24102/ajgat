@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import '../styles/globals.css';
-import GoogleAnalytics from '@/components/GoogleAnalytics';
+import GoogleAnalytics from '@/lib/GA';
 
 function MyApp({ Component, pageProps }) {
 

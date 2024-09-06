@@ -32,7 +32,6 @@ export default function Home() {
         <Typography mt={2} variant="h4">Whabam!</Typography>
         <SomewhereButtonEvent/>
         <FormButtonEvent />
-        <UserColor />
         <StartButton/>
       </Box>
     </>

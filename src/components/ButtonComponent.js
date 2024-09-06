@@ -8,16 +8,6 @@ const handleClick = () => {
 };
 
 function ButtonComponent() {
-  
-  useEffect(() => {
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-VS3C2VKRTK');
-  }, []);
-
   return <button onClick={handleClick}>Click Me</button>;
 }
 
