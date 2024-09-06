@@ -4,7 +4,7 @@ import { Button, Box } from '@mui/material';
 import gaEvent from '@/lib/gaEvent';
 import Head from 'next/head';
 
-export default function createPasswordScreen() {
+export default function CreatePasswordScreen() {
   const router = useRouter();
   const handleClick = () => {
     gaEvent({
