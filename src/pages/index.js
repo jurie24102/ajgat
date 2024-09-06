@@ -5,6 +5,7 @@ import FormButtonEvent from "@/components/FormButtonEvent";
 import SomewhereButtonEvent from "@/components/SomewhereButtonEvent";
 import UserColor from "@/components/UserColor";
 import StartButton from "@/components/StartButton";
+import gaEvent from "@/lib/gaEvent";
 
 export default function Home() {
   const router = useRouter();
@@ -32,7 +33,24 @@ export default function Home() {
         <Typography mt={2} variant="h4">Whabam!</Typography>
         <SomewhereButtonEvent/>
         <FormButtonEvent />
-        <StartButton/>
+        <StartButton />
+        <Button
+          onClick={() =>
+            {
+              gaEvent({
+                category: 'Routing',
+                action: 'Clicked Login',
+                label: 'Route to Create Password',
+                value: 1
+              });
+              router.push("/Login/loginScreen")
+            }
+          }
+          sx={{ mt: 3 }}
+          variant="contained"
+        >
+          Go To Login Screen
+        </Button>
       </Box>
     </>
   );
