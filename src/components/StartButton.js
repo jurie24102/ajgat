@@ -1,30 +1,19 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import { Button } from '@mui/material';
-import GoogleAnalytics from '../components/GoogleAnalytics'
+import { useEffect } from 'react';
 
+const StartButton = () => {
 
-
-function StartButton() {
-
-const handleClick = () => {
-    GoogleAnalytics({
-      action: 'Pressed Start',
-      category: 'Index Page',
-      label: 'Index Start Button',
-    })
-};
-  
-  useEffect(() => {
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
+  const handleClick = () => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'click', {
+        event_category: 'Index Page',
+        event_label: 'Index Start Button',
+        value: 'Pressed Start'
+      });
     }
-    gtag('js', new Date());
-    gtag('config', 'G-VS3C2VKRTK');
-  }, []);
+  };
 
-  return <Button sx={{mt: 3}} onClick={handleClick} variant="contained">Start</Button>;
-}
+  return <Button sx={{ mt: 3 }} onClick={handleClick} variant="contained">Start</Button>;
+};
 
 export default StartButton;
