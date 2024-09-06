@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import useRouter from 'next/router';
 import { Button, Box } from '@mui/material';
 import gaEvent from '@/lib/gaEvent';
 import Head from 'next/head';
