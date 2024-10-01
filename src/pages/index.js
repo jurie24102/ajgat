@@ -39,7 +39,7 @@ export default function Home() {
             {
               gaEvent({
                 category: 'Login Routing',
-                action: 'Clicked Go To Login',
+                action: 'Clicked Go To Login', // event name
                 label: 'Route to Login screen',
                 value: 1
               });
